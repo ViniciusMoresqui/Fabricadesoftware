@@ -43,11 +43,11 @@
 -----------------------------------------------------------------------------------------------------------------------------------------
 
                                 🧑‍🏫 Usuários do Sistema
-                  Perfil                                    Função no sistema
+                  Perfil                                   Função no sistema
                   Diretores(as)	                      Acesso total, controle de permissões e relatórios
                   Coordenadores(as)	                      Upload, edição e substituição de arquivos
                   Secretários(as)	                      Organização, filtros e busca de documentos
-                  Servidores Administrativos	             Leitura e compartilhamento controlado
+                  Servidores Administrativos	           Leitura e compartilhamento controlado
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
