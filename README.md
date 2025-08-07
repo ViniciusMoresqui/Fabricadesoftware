@@ -1,24 +1,24 @@
                     📚 Sistema de Organização e Centralização de Documentos Escolares
     
-        🚀 Solução digital para gestão eficiente de documentos em instituições públicas de ensino
+          🚀 Solução digital para gestão eficiente de documentos em instituições públicas de ensino
 
 -------------------------------------------------------------------------------------------------------------------------
 
-                                              🧩 Problema Identificado
+                                        🧩 Problema Identificado
     
-             Escolas públicas de ensino fundamental e médio enfrentam sérios desafios na gestão documental. 
+        Escolas públicas de ensino fundamental e médio enfrentam sérios desafios na gestão documental. 
              
-                                           Entre os principais problemas:
+                                        Entre os principais problemas:
     
-                                          1 - Arquivos espalhados em diferentes computadores;
+                             1 - Arquivos espalhados em diferentes computadores;
                                               
-                                          2 - Falta de padronização em nomes e versões;
+                                2 - Falta de padronização em nomes e versões;
                                               
-                                          3 - Dificuldade de localização e perda de documentos;
+                            3 - Dificuldade de localização e perda de documentos;
                                               
-                                          4 - Risco de não cumprimento de exigências legais e pedagógicas;
+                        4 - Risco de não cumprimento de exigências legais e pedagógicas;
                                               
-                                          5 - Falta de controle de acesso e histórico.
+                                 5 - Falta de controle de acesso e histórico.
 
 📌 Exemplo real:
 
