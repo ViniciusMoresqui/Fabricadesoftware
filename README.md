@@ -61,50 +61,51 @@
 
  -----------------------------------------------------------------------------------------------------------------------------------------
 
-                                                      🔧 Principais Recursos
+                                           🔧 Principais Recursos
 
-                                      ________________________________________________________
-                                     |                 / Organização e Upload /               |
-                                     |                                                        |
-                                     |            Categorias e subpastas personalizáveis      |
-                                     |                                                        |
-                                     |           Upload com sugestão automática de nome       |
-                                     |                   e categoria (via IA)                 |
-                                     |                                                        |
-                                     |            Substituição com histórico de versões       |
-                                     |________________________________________________________|
+                           ________________________________________________________
+                          |                / Organização e Upload /                |
+                          |                                                        |
+                          |          Categorias e subpastas personalizáveis        |
+                          |                                                        |
+                          |          Upload com sugestão automática de nome        |
+                          |                  e categoria (via IA)                  |
+                          |                                                        |
+                          |          Substituição com histórico de versões         |
+                          |________________________________________________________|
 
-                                      ________________________________________________________
-                                     |                   / Busca e Filtros /                  |
-                                     |                                                        |
-                                     |   Busca por nome, data, categoria e conteúdo interno   |
-                                     |                                                        |
-                                     | Filtros avançados e visualização em estrutura de pastas|
-                                     |________________________________________________________|
+                            ________________________________________________________
+                           |                   / Busca e Filtros /                  |
+                           |                                                        |
+                           |   Busca por nome, data, categoria e conteúdo interno   |
+                           |                                                        |
+                           | Filtros avançados e visualização em estrutura de pastas|
+                           |________________________________________________________|
                                                   
-                                      ________________________________________________________
-                                     |                / Segurança e Acesso /                  |
-                                     |                                                        |
-                                     |   Permissões por usuário (leitura, edição, exclusão)   |
-                                     |                                                        |
-                                     |      Logs de atividades e criptografia dos dados       |
-                                     |________________________________________________________|
+                            ________________________________________________________
+                           |                / Segurança e Acesso /                  |
+                           |                                                        |
+                           |   Permissões por usuário (leitura, edição, exclusão)   |
+                           |                                                        |
+                           |      Logs de atividades e criptografia dos dados       |
+                           |________________________________________________________|
                                   
-                                      ________________________________________________________
-                                     |                / Relatórios e Insights /               |
-                                     |                                                        |
-                                     |         Relatórios de documentos mais acessados        |
-                                     |                                                        |
-                                     |         Versão mobile para tablets e celulares         |
-                                     |________________________________________________________|
+                            ________________________________________________________
+                           |                / Relatórios e Insights /               |
+                           |                                                        |
+                           |         Relatórios de documentos mais acessados        |
+                           |                                                        |
+                           |         Versão mobile para tablets e celulares         |
+                           |________________________________________________________|
 
-                                      ________________________________________________________
-                                     |                    / Acessibilidade /                  |
-                                     |                                                        |
-                                     |                 Interface web responsiva               |
-                                     |                                                        |
-                                     |          Versão mobile para tablets e celulares        |
-                                     |________________________________________________________|
+                            ________________________________________________________
+                           |                    / Acessibilidade /                  |
+                           |                                                        |
+                           |                 Interface web responsiva               |
+                           |                                                        |
+                           |          Versão mobile para tablets e celulares        |
+                           |________________________________________________________|
+                                     
 -----------------------------------------------------------------------------------------------------------------------------------------
 
                                               📦 Modelo de Receita e Custo
