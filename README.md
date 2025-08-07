@@ -43,21 +43,21 @@
 -----------------------------------------------------------------------------------------------------------------------------------------
 
                                               🧑‍🏫 Usuários do Sistema
-                                Perfil                                     Função no sistema
-                                Diretores(as)	                       Acesso total, controle de permissões e relatórios
-                                Coordenadores(as)	                       Upload, edição e substituição de arquivos
-                                Secretários(as)	                       Organização, filtros e busca de documentos
-                                Servidores Administrativos	               Leitura e compartilhamento controlado
+                              Perfil                                     Função no sistema
+                              Diretores(as)	                       Acesso total, controle de permissões e relatórios
+                              Coordenadores(as)	                       Upload, edição e substituição de arquivos
+                              Secretários(as)	                       Organização, filtros e busca de documentos
+                              Servidores Administrativos	               Leitura e compartilhamento controlado
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-                                                          🏛️ Cliente-alvo
+                                              🏛️ Cliente-alvo
                                                       
-                                           1 - Secretarias de Educação municipais e estaduais;
+                            1 - Secretarias de Educação municipais e estaduais;
 
-                                                   2 - Direções de escolas públicas;
+                                      2 - Direções de escolas públicas;
                                               
-                                3 - Redes públicas de ensino interessadas em modernização administrativa.
+                  3 - Redes públicas de ensino interessadas em modernização administrativa.
 
  -----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -107,67 +107,69 @@
                                      |________________________________________________________|
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-                                                    📦 Modelo de Receita e Custo
+                                              📦 Modelo de Receita e Custo
                                                     
-                                                    💰 Estrutura de Custo Inicial
+                                              💰 Estrutura de Custo Inicial
                                                     
-                              1 - Item	                                        Descrição
+                                                 1 - Item   /   Descrição
                                               
-                              2 - Desenvolvimento do sistema	                Programação, banco de dados, segurança
+                           2 - Desenvolvimento do sistema   /   Programação, banco de dados, segurança
                                               
-                              3 - Infraestrutura	                                Servidores, backups e hospedagem em nuvem/local
+                             3 - Infraestrutura   /   Servidores, backups e hospedagem em nuvem/local
                                               
-                              4 - Suporte técnico	                                Manutenção e atendimento às escolas
+                                   4 - Suporte técnico   /   Manutenção e atendimento às escolas
                                               
-                              5 - Treinamento	                                Capacitação dos usuários da escola
+                                     5 - Treinamento   /   Capacitação dos usuários da escola
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-                                      💼 Receita (Projeção por modelo SaaS ou contrato público)
+                                    💼 Receita (Projeção por modelo SaaS ou contrato público)
                                   
-                                                          Modelo	Descrição
+                                                        Modelo	Descrição
                                                           
-                                I - Assinatura por escola	Mensal ou anual, baseado no número de usuários
+                            I - Assinatura por escola	Mensal ou anual, baseado no número de usuários
                                   
-                                II - Licença para redes públicas	
+                                                II - Licença para redes públicas	
                                   
-                                III - Contrato com secretaria municipal ou estadual
+                                      III - Contrato com secretaria municipal ou estadual
                                   
-                                IV - Customizações avulsas	
+                                                  IV - Customizações avulsas	
                                   
-                                V - Recursos ou integrações sob demanda
+                                            V - Recursos ou integrações sob demanda
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-                                                      📢 Canais de Distribuição
+                                              📢 Canais de Distribuição         
                                                       
-                                              Apresentações para secretarias de educação;
+                                      Apresentações para secretarias de educação;
         
-                                          Chamadas públicas e editais de inovação educacional;
+                                  Chamadas públicas e editais de inovação educacional;
         
-                                            Parcerias com universidades ou institutos federais;
+                                  Parcerias com universidades ou institutos federais;
                                             
-                                              Feiras e eventos de tecnologia educacional;
+                                      Feiras e eventos de tecnologia educacional;
                                             
-                                                  Ações piloto em escolas públicas.
+                                            Ações piloto em escolas públicas.
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-                                                📅 Etapas de Execução Inicial (Roadmap)
+                                            📅 Etapas de Execução Inicial (Roadmap)
                                                 
-                                      ✅ Levantamento de requisitos com profissionais da educação
+                                    ✅ Levantamento de requisitos com profissionais da educação
                                                 
-                                             🎨 Criação do protótipo de interface (UX/UI)
+                                          🎨 Criação do protótipo de interface (UX/UI)
                                                 
-                                           🛠️ Desenvolvimento do MVP (mínimo produto viável)
+                                       🛠️ Desenvolvimento do MVP (mínimo produto viável)
                                                 
-                                                    🧪 Testes em escolas piloto
+                                                🧪 Testes em escolas piloto
                                                 
-                                              🚀 Implantação oficial com treinamento
+                                            🚀 Implantação oficial com treinamento
                                                 
-                                        🔄 Ajustes e expansão para outras unidades escolares
+                                      🔄 Ajustes e expansão para outras unidades escolares
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-🤝 Contribuições e Parcerias
-Este projeto está aberto para colaborações técnicas, educacionais e institucionais. Caso deseje participar como desenvolvedor, tester, gestor ou escola piloto, entre em contato conosco.
+                                            🤝 Contribuições e Parcerias
+                  Este projeto está aberto para colaborações técnicas, educacionais e institucionais. 
+
+          Caso deseje participar como desenvolvedor, tester, gestor ou escola piloto, entre em contato conosco.
