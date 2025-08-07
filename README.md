@@ -26,23 +26,23 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-                                                      💡 Solução Proposta
+                                              💡 Solução Proposta
 
-                            Criar um sistema web de gestão documental para escolas públicas, com foco em:
+                  Criar um sistema web de gestão documental para escolas públicas, com foco em:
 
-                                           1 - Organização automatizada por categoria;
+                                  1 - Organização automatizada por categoria;
                                             
-                                           2 - Centralização dos arquivos em servidor seguro;
+                                  2 - Centralização dos arquivos em servidor seguro;
                                             
-                                           3 - Controle de versões, acessos e permissões;
+                                  3 - Controle de versões, acessos e permissões;
                                             
-                                           4 - Busca inteligente e relatórios de uso;
+                                  4 - Busca inteligente e relatórios de uso;
                                             
-                                           5 - Interface intuitiva e multiplataforma (web e mobile).
+                                  5 - Interface intuitiva e multiplataforma (web e mobile).
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-                                                🧑‍🏫 Usuários do Sistema
+                                              🧑‍🏫 Usuários do Sistema
                                 Perfil                                     Função no sistema
                                 Diretores(as)	                       Acesso total, controle de permissões e relatórios
                                 Coordenadores(as)	                       Upload, edição e substituição de arquivos
