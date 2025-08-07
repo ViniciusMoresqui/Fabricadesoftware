@@ -1,6 +1,6 @@
-                          📚 Sistema de Organização e Centralização de Documentos Escolares
+                    📚 Sistema de Organização e Centralização de Documentos Escolares
     
-                🚀 Solução digital para gestão eficiente de documentos em instituições públicas de ensino
+        🚀 Solução digital para gestão eficiente de documentos em instituições públicas de ensino
 
 -------------------------------------------------------------------------------------------------------------------------
 
