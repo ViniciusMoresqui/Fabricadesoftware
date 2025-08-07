@@ -63,16 +63,16 @@
 
                                            🔧 Principais Recursos
 
-                           ________________________________________________________
-                          |                / Organização e Upload /                |
-                          |                                                        |
-                          |          Categorias e subpastas personalizáveis        |
-                          |                                                        |
-                          |          Upload com sugestão automática de nome        |
-                          |                  e categoria (via IA)                  |
-                          |                                                        |
-                          |          Substituição com histórico de versões         |
-                          |________________________________________________________|
+                            ________________________________________________________
+                           |                / Organização e Upload /                |
+                           |                                                        |
+                           |          Categorias e subpastas personalizáveis        |
+                           |                                                        |
+                           |          Upload com sugestão automática de nome        |
+                           |                  e categoria (via IA)                  |
+                           |                                                        |
+                           |          Substituição com histórico de versões         |
+                           |________________________________________________________|
 
                             ________________________________________________________
                            |                   / Busca e Filtros /                  |
@@ -154,23 +154,24 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-                                            📅 Etapas de Execução Inicial (Roadmap)
+                                          📅 Etapas de Execução Inicial (Roadmap)
                                                 
-                                    ✅ Levantamento de requisitos com profissionais da educação
+                                  ✅ Levantamento de requisitos com profissionais da educação
                                                 
-                                          🎨 Criação do protótipo de interface (UX/UI)
+                                        🎨 Criação do protótipo de interface (UX/UI)
                                                 
                                        🛠️ Desenvolvimento do MVP (mínimo produto viável)
                                                 
-                                                🧪 Testes em escolas piloto
+                                              🧪 Testes em escolas piloto
                                                 
-                                            🚀 Implantação oficial com treinamento
+                                          🚀 Implantação oficial com treinamento
                                                 
-                                      🔄 Ajustes e expansão para outras unidades escolares
+                                    🔄 Ajustes e expansão para outras unidades escolares
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
                                             🤝 Contribuições e Parcerias
                   Este projeto está aberto para colaborações técnicas, educacionais e institucionais. 
 
-          Caso deseje participar como desenvolvedor, tester, gestor ou escola piloto, entre em contato conosco.
+                              Caso deseje participar como desenvolvedor, tester, 
+                              gestor ou escola piloto, entre em contato conosco.
