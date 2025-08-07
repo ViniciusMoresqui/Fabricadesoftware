@@ -37,3 +37,38 @@
 ### Prazos e expectativas
   Prazo: estimado de seis meses para a criação e implementação do produto viavel.
   Expectativa: Um sistema suportando multiusuarios com funcionalidades de gestão de facil uso, permitindo categorias e sub-categorias
+
+## NIVEL 2
+
+### Requisitos funcionais
+ - Tela de login
+ - Acesso personalizado por cargos
+ - Importação de arquivos
+ - Exportação de arquivos
+ - Atualizar arquivos existentes
+ - Classificação de arquivos importados
+ - Sugestão de classificação com IA
+ - Busca por titulos, categorias, sub-categorias e data de importação
+ - Registro de alterações
+ - Opção de ajuda
+ - Painel de avisos
+ - Adicionar 'notas de uso' aos documentos
+ - Integração de scanner fisico (em debate)
+ - Integração de scanner via camera mobile (em debate)
+
+ 
+### Requisitos não funcionais
+ - Acesso simultâneo
+ - Multi usuarios
+ - Permissões de acesso
+ - Backup agendado
+
+### Atores
+ - Diretor(a)
+ - Secretario(a)
+ - Pedagogo(ga)
+ - Professor(a)
+
+
+
+
