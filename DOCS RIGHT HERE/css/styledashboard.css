@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .header-icons .status {
+    color: #00aaff;
+    font-weight: bold;
+}
+
+header .header-icons .user-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+nav {
+    background-color: #27a9cc;
+    padding: 10px 125px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+main {
+    padding: 10px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: #e3e3e3;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.card {
+    background-color: #a7d5d8;
+    height: 100px;
+    border-radius: 10px;
+}
