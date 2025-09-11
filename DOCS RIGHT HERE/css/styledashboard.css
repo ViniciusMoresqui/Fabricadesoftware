@@ -80,3 +80,37 @@ main {
     height: 100px;
     border-radius: 10px;
 }
+
+.card {
+    background-color: #a7d5d8;
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 180px;
+    color: white;
+}
+
+.card-title {
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 5px;
+}
+
+.card hr {
+    border: none;
+    border-top: 2px solid rgb(120, 135, 158);
+    margin: 0;
+}
+
+.card-content {
+    margin-top: 10px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
