@@ -1,52 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Docs Right Here</title>
-    <link rel="stylesheet" href="/DOCS RIGHT HERE/css/styledashboard.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Docs Right Here</title>
+  <link rel="stylesheet" href="/DOCS RIGHT HERE/css/styledashboard.css" />
 </head>
+
 <body>
-    <header>
-        <div class="logo">
-            <img src="/DOCS RIGHT HERE/img/logo docs righthere.png" alt="Docs Right Here">
-        </div>
-        <div class="header-icons">
-        <a href="#" class="icon-button"><img src="/DOCS RIGHT HERE/img/CONFIG.png" alt="Configurações"></a>
-        <a href="#" class="icon-button"><img src="/DOCS RIGHT HERE/img/notificacoes.png" alt="Notificações"></a>
-        <a href="#" class="icon-button"><img src="/DOCS RIGHT HERE/img/iconeperfil.png" alt="Perfil"></a>
-        <span class="status"><img src="/DOCS RIGHT HERE/img/ONLINE.png" alt="Status online"></span>
-        <a href="#" class="icon-button">
-            <img src="/DOCS RIGHT HERE/img/userphoto.jpg" alt="Foto do usuário" class="user-photo">
-        </a>
+  <header>
+    <div class="logo">
+      <img src="/DOCS RIGHT HERE/img/logo docs righthere.png" alt="Docs Right Here" />
     </div>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#">Geral</a></li>
-            <li><a href="#">Professor</a></li>
-            <li><a href="#">Aluno</a></li>
-            <li><a href="#">Secretaria</a></li>
-            <li><a href="#">Relatórios</a></li>
-        </ul>
-    </nav>
+    <div class="header-icons">
+      <a href="#" class="icon-button"><img src="/DOCS RIGHT HERE/img/CONFIG.png" alt="Configurações" /></a>
+      <a href="#" class="icon-button"><img src="/DOCS RIGHT HERE/img/notificacoes.png" alt="Notificações" /></a>
+      <a href="#" class="icon-button"><img src="/DOCS RIGHT HERE/img/iconeperfil.png" alt="Perfil" /></a>
+      <span class="status"><img src="/DOCS RIGHT HERE/img/ONLINE.png" alt="Status online" /></span>
+      <a href="#" class="icon-button"><img src="/DOCS RIGHT HERE/img/userphoto.jpg" alt="Foto do usuário"
+          class="user-photo" /></a>
+    </div>
+  </header>
 
-    <main>
+  <nav>
+    <ul>
+      <li><a href="#">Geral</a></li>
+      <li><a href="#">Professor</a></li>
+      <li><a href="#">Aluno</a></li>
+      <li><a href="#">Secretaria</a></li>
+      <li><a href="#">Relatórios</a></li>
+    </ul>
+  </nav>
+
+  <main>
     <div class="cards-container" id="docs">
-        <div class="card">
-            <div class="card-title" contenteditable="true">Título</div>
-            <hr>
-            <div class="card-content" contenteditable="true">Digite o conteúdo...</div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title" contenteditable="true">Título</div>
+          <div class="menu-area">
+            <input type="checkbox" class="card-select" title="Selecionar" />
+          </div>
         </div>
-        <div class="card"></div> 
-        <div class="card"></div> 
-        <div class="card"></div> 
-        <div class="card"></div> 
-        <div class="card"></div>
-        </div>
-    </div>
-</main>
+        <hr />
+        <div class="card-content" contenteditable="true" data-placeholder="Digite o conteúdo..."></div>
+        <div class="attachments-area"></div>
+      </div>
 
+      <div class="card">
+        <div class="card-content" contenteditable="true" data-placeholder="Digite o conteúdo..."></div>
+        <div class="attachments-area"></div>
+      </div>
+      <div class="card">
+        <div class="card-content" contenteditable="true" data-placeholder="Digite o conteúdo..."></div>
+        <div class="attachments-area"></div>
+      </div>
+      <div class="card">
+        <div class="card-content" contenteditable="true" data-placeholder="Digite o conteúdo..."></div>
+        <div class="attachments-area"></div>
+      </div>
+      <div class="card">
+        <div class="card-content" contenteditable="true" data-placeholder="Digite o conteúdo..."></div>
+        <div class="attachments-area"></div>
+      </div>
+      <div class="card">
+        <div class="card-content" contenteditable="true" data-placeholder="Digite o conteúdo..."></div>
+        <div class="attachments-area"></div>
+      </div>
+    </div>
+  </main>
+  <script src="/DOCS RIGHT HERE/js/dashboard.js"></script>
 </body>
 </html>
