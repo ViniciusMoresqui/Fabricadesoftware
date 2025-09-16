@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", loadAll())
+async function loadAll(params){
   const fileIcons = {
     pdf: "/DOCS RIGHT HERE/img/PdfLogo.png",
     doc: "/DOCS RIGHT HERE/img/wordLogo.png",
@@ -8,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ppt: "/DOCS RIGHT HERE/img/PowerpointLogo.png",
     pptx: "/DOCS RIGHT HERE/img/PowerpointLogo.png"
   };
+
+  await loadCards();
 
   const cards = document.querySelectorAll(".card");
 
@@ -139,6 +142,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function closeExpandedCard(card) {
+    // save(card.id)
+    let id = card.id;
     card.classList.remove("expanded");
     document.querySelectorAll(".card").forEach((c) =>
       c.classList.remove("blur-background")
@@ -153,5 +158,6 @@ document.addEventListener("DOMContentLoaded", () => {
       card.querySelector(".delete-files-btn")?.remove();
       card.querySelector(".share-files-btn")?.remove();
     }
+    save(id)
   }
-});
+};
