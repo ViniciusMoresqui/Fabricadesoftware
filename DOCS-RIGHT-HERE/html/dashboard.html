@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - DocsRightHere</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="dashboard-layout">
+
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="header-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>DocsRightHere</h1>
+            </div>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buscar...">
+            </div>
+            <div class="header-actions">
+                <i class="fas fa-cog"></i>
+                <i class="fas fa-bell"></i>
+                <div class="user-avatar">
+                    </div>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <section class="welcome-banner">
+                <h2>Bem-vindo de volta!</h2>
+                <p>Aqui está um resumo das atividades da sua escola hoje.</p>
+            </section>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="card-content">
+                        <h4>Total de Alunos</h4>
+                        <p class="stat-number">1,247</p>
+                        <p class="stat-comparison positive">+5.2% vs mês anterior</p>
+                    </div>
+                    <div class="card-icon-wrapper green">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-content">
+                        <h4>Professores Ativos</h4>
+                        <p class="stat-number">16</p>
+                        <p class="stat-comparison positive">+2.1% vs mês anterior</p>
+                    </div>
+                    <div class="card-icon-wrapper blue">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-content">
+                        <h4>Turmas Ativas</h4>
+                        <p class="stat-number">34</p>
+                        <p class="stat-comparison positive">+5.2% vs mês anterior</p>
+                    </div>
+                    <div class="card-icon-wrapper cyan">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-content">
+                        <h4>Relatórios Pendentes</h4>
+                        <p class="stat-number">14</p>
+                        <p class="stat-comparison negative">-9.3% vs mês anterior</p>
+                    </div>
+                    <div class="card-icon-wrapper orange">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-panels">
+                <div class="panel activities-panel">
+                    <h3>Atividades Recentes</h3>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <div class="activity-icon yellow"><i class="fas fa-file-alt"></i></div>
+                            <div class="activity-details">
+                                <h4>Novo arquivo anexado</h4>
+                                <p>por Maria Silva</p>
+                            </div>
+                            <span class="activity-time">2 min atrás</span>
+                        </li>
+                        <li class="activity-item">
+                            <div class="activity-icon green"><i class="fas fa-user-plus"></i></div>
+                            <div class="activity-details">
+                                <h4>Novo Aluno Matriculado</h4>
+                                <p>João Matheus Bertoman - 2º Ano</p>
+                            </div>
+                            <span class="activity-time">7 min atrás</span>
+                        </li>
+                        <li class="activity-item">
+                            <div class="activity-icon purple"><i class="fas fa-calendar-alt"></i></div>
+                            <div class="activity-details">
+                                <h4>Reunião de pais agendada</h4>
+                                <p>Professora Paula Schmitt</p>
+                            </div>
+                            <span class="activity-time">2 min atrás</span>
+                        </li>
+                    </ul>
+                    <button class="view-all-btn">Ver todas atividades</button>
+                </div>
+
+                <div class="panel actions-panel">
+                    <h3>Ações Rápidas</h3>
+                    <ul class="action-list">
+                        <li><a href="#"><i class="fas fa-chart-bar"></i> Gerar Relatório</a></li>
+                        <li><a href="#"><i class="fas fa-archive"></i> Arquivos</a></li>
+                        <li><a href="#"><i class="fas fa-search"></i> Consultar Arquivos</a></li>
+                        <li><a href="#"><i class="fas fa-tasks"></i> Realizar Chamada</a></li>
+                        <li><a href="#"><i class="fas fa-calendar-plus"></i> Agendar reunião</a></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
