@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DocsRightHere - Login</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -62,7 +62,7 @@
                     <button type="submit" class="btn-login">Entrar</button>
 
                     <p class="signup-link">
-                        Não possui conta? <a href="#">Solicitar acesso</a>
+                        Não possui conta? <a href='cadastro.html'class='botao'>Cadastrar-se</a>
                     </p>
                 </form>
                 
@@ -73,6 +73,14 @@
         </div>
 
     </div>
+
+    <script>
+        const botao = document.getElementById('btn-login');
+
+        botao.addEventListener('click', () =>{
+        window.location.href='cadastro.html';
+        })
+    </script>
 
 </body>
 </html>
