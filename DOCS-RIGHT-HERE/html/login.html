@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DocsRightHere - Login</title>
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -15,8 +15,10 @@
             <div class="info-content">
                 <div class="logo">
                     <i class="fas fa-graduation-cap"></i>
-                    <h1>DocsRightHere</h1>
-                    <p>Sistema de gestão escolar</p>
+                    <div>
+                        <h1>DocsRightHere</h1>
+                        <p>Sistema de gestão escolar</p>
+                    </div>
                 </div>
 
                 <h2>Gerencie sua instituição <br><span>com excelência</span></h2>
@@ -56,10 +58,10 @@
                             <input type="checkbox" id="remember">
                             <label for="remember">Lembrar-me</label>
                         </div>
-                        <a href="#">Esqueceu a senha?</a>
+                        <a href="redef-senha.html">Esqueceu a senha?</a>
                     </div>
 
-                    <button type="submit" class="btn-login">Entrar</button>
+                    <a href="dashboard.html" class="btn-login">Entrar</a>
 
                     <p class="signup-link">
                         Não possui conta? <a href='cadastro.html'class='botao'>Cadastrar-se</a>
@@ -74,13 +76,6 @@
 
     </div>
 
-    <script>
-        const botao = document.getElementById('btn-login');
-
-        botao.addEventListener('click', () =>{
-        window.location.href='cadastro.html';
-        })
-    </script>
-
+    <script src="/js/login.js"></script>
 </body>
 </html>

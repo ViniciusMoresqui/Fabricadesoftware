@@ -1,3 +1,214 @@
+/* Importando uma fonte do Google Fonts para se aproximar da imagem */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Estilos Globais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #f0f8ff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ----- Layout de 2 Colunas (Login/Cadastro) ----- */
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.info-panel {
+    flex-basis: 55%;
+    background: linear-gradient(120deg, #10b981, #06b6d4, #0891b2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ... (Todos os outros estilos do .info-panel, .logo, .feature-list, etc. continuam aqui, sem alterações) ... */
+.info-panel::before, .info-panel::after { content: ''; position: absolute; background-color: rgba(255, 255, 255, 0.05); border-radius: 50%; z-index: 1; }
+.info-panel::before { width: 300px; height: 300px; top: -50px; left: -100px; }
+.info-panel::after { width: 450px; height: 450px; bottom: -150px; right: -150px; }
+.info-content { position: relative; z-index: 2; max-width: 500px; }
+.logo { display: flex; align-items: center; gap: 15px; margin-bottom: 40px; }
+.logo .fa-graduation-cap { font-size: 2.5rem; padding: 10px; border: 2px solid white; border-radius: 8px; }
+.logo h1 {font-size: 1.8rem; font-weight: 700; margin-bottom: 0; line-height: 1.2;}
+.logo p {font-size: 0.9rem; margin-top: 4px; line-height: 1;}
+.info-content h2 { font-size: 2.8rem; font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+.info-content h2 span { color: #a7f3d0; }
+.info-content .description { font-size: 1rem; line-height: 1.6; margin-bottom: 40px; max-width: 450px; }
+.feature-list { list-style: none; }
+.feature-list li { display: flex; align-items: center; gap: 15px; font-size: 1.1rem; margin-bottom: 15px; }
+.feature-list .fas { font-size: 1.5rem; }
+
+
+/* ----- Painel da Direita (Login/Cadastro) ----- */
+.login-panel {
+    flex-basis: 45%;
+    background-color: #1e293b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 400px;
+    background-color: #293649;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+/* ... (Todos os outros estilos de formulário, como .input-group, .btn-login, etc., continuam aqui, sem alterações) ... */
+.form-wrapper h2 { font-size: 1.8rem; font-weight: 600; margin-bottom: 5px; }
+.form-wrapper .form-title { color: #22d3ee; text-align: center; margin-bottom: 30px; }
+.form-wrapper h2 span { color: #22d3ee; }
+.form-wrapper > p { color: #94a3b8; margin-bottom: 30px; }
+.input-group { position: relative; margin-bottom: 20px; }
+.input-group label { display: block; margin-bottom: 8px; font-size: 0.9rem; color: #cbd5e1; }
+.input-group .icon { position: absolute; left: 15px; top: 42px; color: #94a3b8; }
+.input-group input { width: 100%; padding: 12px 15px; background-color: #3f4d60; border: 1px solid #526175; border-radius: 8px; color: white; font-size: 1rem; }
+.input-group .icon + input { padding-left: 45px; }
+.input-group input::placeholder { color: #94a3b8; }
+.input-group input:focus { outline: none; border-color: #22d3ee; }
+.form-options { display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; margin-bottom: 30px; }
+.remember-me { display: flex; align-items: center; gap: 8px; }
+.form-options a { color: #22d3ee; text-decoration: none; }
+.form-options a:hover { text-decoration: underline; }
+.btn-login { display: block; width: 100%; padding: 15px; border: none; border-radius: 8px; background: linear-gradient(to right, #22d3ee, #10b981); color: white; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: opacity 0.3s ease; margin-top: 10px; margin-bottom: 25px; text-align: center; text-decoration: none; }
+.btn-login:hover { opacity: 0.9; }
+.signup-link { text-align: center; font-size: 0.9rem; color: #cbd5e1; }
+.signup-link a { color: #22d3ee; text-decoration: none; font-weight: 600; }
+.form-footer { text-align: center; margin-top: 30px; font-size: 0.8rem; color: #94a3b8; }
+.form-row { display: flex; gap: 20px; }
+.form-row .input-group { flex: 1; }
+.form-row .input-group:first-child { flex: 3; }
+.confirmation-text { color: #cbd5e1; text-align: center; font-size: 1rem; line-height: 1.6; margin-bottom: 40px; }
+
+
+/* ========== NOVOS ESTILOS PARA A TELA DE REDEFINIÇÃO DE SENHA ========== */
+
+/* Layout de corpo para página centralizada */
+body.centered-layout {
+    background-color: #1e293b; /* Fundo escuro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Contêiner do formulário de redefinição */
+.reset-container {
+    background-color: #293649;
+    padding: 40px 50px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    z-index: 2; /* Fica na frente das formas */
+}
+
+.reset-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.reset-logo .fa-graduation-cap {
+    font-size: 1.8rem;
+    padding: 8px;
+    background-color: #3f4d60;
+    border-radius: 8px;
+}
+
+.reset-logo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.reset-container h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.reset-container h2 span {
+    color: #22d3ee;
+}
+
+.reset-container .instruction-text {
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+/* Alinha a label à esquerda dentro do formulário centralizado */
+.reset-container .input-group {
+    text-align: left;
+}
+
+/* Rodapé fixo no final da página */
+.page-footer {
+    position: absolute;
+    bottom: 20px;
+    color: #94a3b8;
+    font-size: 0.8rem;
+    z-index: 2;
+}
+
+
+/* Formas decorativas do fundo */
+.shape {
+    position: absolute;
+    background-color: rgba(41, 54, 73, 0.5); /* #293649 com 50% de opacidade */
+    z-index: 1;
+}
+
+.shape-1 { /* Círculo esquerdo */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    left: 15%;
+    top: 30%;
+}
+
+.shape-2 { /* Quadrado superior esquerdo */
+    width: 250px;
+    height: 250px;
+    border-radius: 60px;
+    transform: rotate(45deg);
+    left: -80px;
+    top: -80px;
+}
+
+.shape-3 { /* Quadrado inferior direito */
+    width: 280px;
+    height: 280px;
+    border-radius: 70px;
+    transform: rotate(45deg);
+    right: -100px;
+    bottom: -100px;
+}
+
+.shape-4 { /* Círculo superior direito */
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    right: 5%;
+    top: 10%;
+}
+
 /* Importando a fonte Inter, mais fiel à imagem */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
@@ -495,4 +706,229 @@ body.dashboard-layout {
 }
 .btn-primary:hover {
     background-color: #4338ca; /* Tom mais escuro */
+}
+
+/* ========== NOVOS ESTILOS PARA A TELA DE ARQUIVOS (Layout de Sidebar) ========== */
+
+/* Novo Layout de App com Sidebar Vertical */
+body {
+    overflow: hidden; /* Previne scroll duplo */
+}
+
+.app-layout {
+    display: flex;
+    height: 100vh;
+    background-color: #1e293b;
+}
+
+.vertical-sidebar {
+    flex-basis: 90px;
+    background: linear-gradient(180deg, #06b6d4, #10b981);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical-sidebar h2 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.main-content-wrapper {
+    flex: 1;
+    overflow-y: auto; /* Permite scroll apenas no conteúdo principal */
+}
+
+/* Ajuste no container do dashboard para funcionar dentro do novo layout */
+.main-content-wrapper .dashboard-container {
+    height: 100%;
+    padding-bottom: 40px;
+}
+
+/* --- Barra de Ferramentas de Arquivos --- */
+.files-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.files-toolbar .toolbar-search {
+    flex-grow: 1;
+    max-width: 450px;
+}
+
+.files-toolbar .toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.files-toolbar .btn-primary {
+    gap: 8px; /* Espaço entre ícone e texto */
+}
+
+/* --- Grid de Conteúdo de Arquivos --- */
+.files-content-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr; /* Coluna de pastas com 350px, restante flexível */
+    gap: 25px;
+}
+
+/* --- Coluna de Pastas --- */
+.folders-panel .section-title {
+    font-size: 1.1rem; /* Título um pouco menor */
+    color: #cbd5e1;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.folders-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.folder-card {
+    background-color: #293649;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.folder-card:hover {
+    background-color: #334155;
+}
+
+.folder-card .icon-wrapper {
+    width: 40px;
+    height: 40px;
+    background-color: #334155;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+.folder-card .folder-info h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #f1f5f9;
+}
+
+.folder-card .folder-info p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+/* --- Coluna de Arquivos Recentes --- */
+.recent-files-panel {
+    padding: 30px !important; /* Sobrescreve o padding da classe .panel */
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.panel-header h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.panel-header a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.panel-header a:hover {
+    text-decoration: underline;
+}
+
+.files-list {
+    list-style: none;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 0;
+}
+
+.file-item + .file-item {
+    border-top: 1px solid #334155;
+}
+
+.file-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+/* Variações de cor do ícone */
+.file-icon.calendar { background-color: #60a5fa33; color: #60a5fa; }
+.file-icon.bulletin { background-color: #22d3ee33; color: #22d3ee; }
+.file-icon.image { background-color: #a78bfa33; color: #a78bfa; }
+.file-icon.sheet { background-color: #4ade8033; color: #4ade80; }
+
+.file-details {
+    flex-grow: 1; /* Faz esta div ocupar o espaço restante */
+}
+
+.file-details h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #f1f5f9;
+}
+
+.file-details p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.file-tag {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    width: 60px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.file-actions {
+    display: flex;
+    gap: 18px;
+    color: #94a3b8;
+    font-size: 1rem;
+    margin-left: 20px;
+}
+
+.file-actions i {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.file-actions i:hover {
+    color: #f1f5f9;
 }
