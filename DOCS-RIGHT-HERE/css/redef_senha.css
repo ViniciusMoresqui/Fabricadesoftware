@@ -1,0 +1,210 @@
+/* Importando uma fonte do Google Fonts para se aproximar da imagem */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Estilos Globais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #f0f8ff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ----- Layout de 2 Colunas (Login/Cadastro) ----- */
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.info-panel {
+    flex-basis: 55%;
+    background: linear-gradient(120deg, #10b981, #06b6d4, #0891b2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ... (Todos os outros estilos do .info-panel, .logo, .feature-list, etc. continuam aqui, sem alterações) ... */
+.info-panel::before, .info-panel::after { content: ''; position: absolute; background-color: rgba(255, 255, 255, 0.05); border-radius: 50%; z-index: 1; }
+.info-panel::before { width: 300px; height: 300px; top: -50px; left: -100px; }
+.info-panel::after { width: 450px; height: 450px; bottom: -150px; right: -150px; }
+.info-content { position: relative; z-index: 2; max-width: 500px; }
+.logo { display: flex; align-items: center; gap: 15px; margin-bottom: 40px; }
+.logo .fa-graduation-cap { font-size: 2.5rem; padding: 10px; border: 2px solid white; border-radius: 8px; }
+.logo h1 { font-size: 1.8rem; font-weight: 700; }
+.logo p { font-size: 0.9rem; margin-top: -25px; }
+.info-content h2 { font-size: 2.8rem; font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+.info-content h2 span { color: #a7f3d0; }
+.info-content .description { font-size: 1rem; line-height: 1.6; margin-bottom: 40px; max-width: 450px; }
+.feature-list { list-style: none; }
+.feature-list li { display: flex; align-items: center; gap: 15px; font-size: 1.1rem; margin-bottom: 15px; }
+.feature-list .fas { font-size: 1.5rem; }
+
+
+/* ----- Painel da Direita (Login/Cadastro) ----- */
+.login-panel {
+    flex-basis: 45%;
+    background-color: #1e293b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 400px;
+    background-color: #293649;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+/* ... (Todos os outros estilos de formulário, como .input-group, .btn-login, etc., continuam aqui, sem alterações) ... */
+.form-wrapper h2 { font-size: 1.8rem; font-weight: 600; margin-bottom: 5px; }
+.form-wrapper .form-title { color: #22d3ee; text-align: center; margin-bottom: 30px; }
+.form-wrapper h2 span { color: #22d3ee; }
+.form-wrapper > p { color: #94a3b8; margin-bottom: 30px; }
+.input-group { position: relative; margin-bottom: 20px; }
+.input-group label { display: block; margin-bottom: 8px; font-size: 0.9rem; color: #cbd5e1; }
+.input-group .icon { position: absolute; left: 15px; top: 42px; color: #94a3b8; }
+.input-group input { width: 100%; padding: 12px 15px; background-color: #3f4d60; border: 1px solid #526175; border-radius: 8px; color: white; font-size: 1rem; }
+.input-group .icon + input { padding-left: 45px; }
+.input-group input::placeholder { color: #94a3b8; }
+.input-group input:focus { outline: none; border-color: #22d3ee; }
+.form-options { display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; margin-bottom: 30px; }
+.remember-me { display: flex; align-items: center; gap: 8px; }
+.form-options a { color: #22d3ee; text-decoration: none; }
+.form-options a:hover { text-decoration: underline; }
+.btn-login { display: block; width: 100%; padding: 15px; border: none; border-radius: 8px; background: linear-gradient(to right, #22d3ee, #10b981); color: white; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: opacity 0.3s ease; margin-top: 10px; margin-bottom: 25px; text-align: center; text-decoration: none; }
+.btn-login:hover { opacity: 0.9; }
+.signup-link { text-align: center; font-size: 0.9rem; color: #cbd5e1; }
+.signup-link a { color: #22d3ee; text-decoration: none; font-weight: 600; }
+.form-footer { text-align: center; margin-top: 30px; font-size: 0.8rem; color: #94a3b8; }
+.form-row { display: flex; gap: 20px; }
+.form-row .input-group { flex: 1; }
+.form-row .input-group:first-child { flex: 3; }
+.confirmation-text { color: #cbd5e1; text-align: center; font-size: 1rem; line-height: 1.6; margin-bottom: 40px; }
+
+
+/* ========== NOVOS ESTILOS PARA A TELA DE REDEFINIÇÃO DE SENHA ========== */
+
+/* Layout de corpo para página centralizada */
+body.centered-layout {
+    background-color: #1e293b; /* Fundo escuro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Contêiner do formulário de redefinição */
+.reset-container {
+    background-color: #293649;
+    padding: 40px 50px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    z-index: 2; /* Fica na frente das formas */
+}
+
+.reset-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.reset-logo .fa-graduation-cap {
+    font-size: 1.8rem;
+    padding: 8px;
+    background-color: #3f4d60;
+    border-radius: 8px;
+}
+
+.reset-logo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.reset-container h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.reset-container h2 span {
+    color: #22d3ee;
+}
+
+.reset-container .instruction-text {
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+/* Alinha a label à esquerda dentro do formulário centralizado */
+.reset-container .input-group {
+    text-align: left;
+}
+
+/* Rodapé fixo no final da página */
+.page-footer {
+    position: absolute;
+    bottom: 20px;
+    color: #94a3b8;
+    font-size: 0.8rem;
+    z-index: 2;
+}
+
+
+/* Formas decorativas do fundo */
+.shape {
+    position: absolute;
+    background-color: rgba(41, 54, 73, 0.5); /* #293649 com 50% de opacidade */
+    z-index: 1;
+}
+
+.shape-1 { /* Círculo esquerdo */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    left: 15%;
+    top: 30%;
+}
+
+.shape-2 { /* Quadrado superior esquerdo */
+    width: 250px;
+    height: 250px;
+    border-radius: 60px;
+    transform: rotate(45deg);
+    left: -80px;
+    top: -80px;
+}
+
+.shape-3 { /* Quadrado inferior direito */
+    width: 280px;
+    height: 280px;
+    border-radius: 70px;
+    transform: rotate(45deg);
+    right: -100px;
+    bottom: -100px;
+}
+
+.shape-4 { /* Círculo superior direito */
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    right: 5%;
+    top: 10%;
+}

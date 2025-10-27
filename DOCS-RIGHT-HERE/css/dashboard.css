@@ -1,0 +1,498 @@
+/* Importando a fonte Inter, mais fiel à imagem */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ========== ESTILOS REVISADOS PARA A TELA DE DASHBOARD ========== */
+
+/* Layout principal do corpo da página do dashboard */
+body.dashboard-layout {
+    background-color: #1e293b; /* Fundo escuro padrão */
+    color: #f1f5f9; /* Cor de texto clara padrão */
+    font-family: 'Inter', sans-serif; /* FONTE ATUALIZADA */
+}
+
+.dashboard-container {
+    padding: 20px 40px 40px 40px; /* ESPAÇAMENTO ATUALIZADO */
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* --- Cabeçalho --- */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px; /* ESPAÇAMENTO ATUALIZADO */
+    border-bottom: 1px solid #334155;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.header-logo .fa-graduation-cap { font-size: 1.8rem; }
+.header-logo h1 { font-size: 1.6rem; font-weight: 600; }
+
+.search-bar { position: relative; width: 450px; }
+.search-bar .fa-search {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+.search-bar input {
+    width: 100%;
+    background-color: #293649;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 12px 15px 12px 45px;
+    color: #f1f5f9;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+.search-bar input::placeholder { color: #94a3b8; }
+.search-bar input:focus { outline: none; border-color: #4f46e5; } /* Foco com cor de destaque */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 1.3rem;
+    color: #cbd5e1;
+}
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #6366f1;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+/* --- Conteúdo Principal --- */
+.dashboard-main {
+    padding-top: 40px; /* ESPAÇAMENTO ATUALIZADO */
+}
+
+.welcome-banner h2 {
+    font-size: 2.5rem; /* TAMANHO DA FONTE AUMENTADO */
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.welcome-banner p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+/* --- Grid de Estatísticas --- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid responsivo */
+    gap: 25px;
+    margin-top: 35px; /* ESPAÇAMENTO ATUALIZADO */
+}
+
+.stat-card {
+    background-color: #293649;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.stat-card h4 {
+    color: #cbd5e1;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.stat-card .stat-number {
+    font-size: 3rem; /* TAMANHO DA FONTE AUMENTADO */
+    font-weight: 700;
+    margin: 8px 0;
+}
+.stat-card .stat-comparison { font-size: 0.9rem; font-weight: 500;}
+.stat-card .positive { color: #4ade80; }
+.stat-card .negative { color: #f87171; }
+
+.card-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.card-icon-wrapper.green { background-color: #166534; color: #4ade80; }
+.card-icon-wrapper.blue { background-color: #1e40af; color: #60a5fa; }
+.card-icon-wrapper.cyan { background-color: #0e7490; color: #22d3ee; }
+.card-icon-wrapper.orange { background-color: #9a3412; color: #fb923c; }
+
+
+/* --- Painéis de Conteúdo --- */
+.content-panels {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    margin-top: 35px; /* ESPAÇAMENTO ATUALIZADO */
+}
+
+.panel {
+    background-color: #293649;
+    border-radius: 12px;
+    padding: 30px;
+}
+.panel h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* Painel de Atividades */
+.activity-list { list-style: none; }
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0; /* Espaçamento vertical */
+}
+.activity-item + .activity-item {
+    border-top: 1px solid #334155; /* Linha divisória sutil */
+}
+.activity-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    flex-shrink: 0; /* Impede que o ícone encolha */
+}
+.activity-icon.yellow { background-color: #facc1533; color: #facc15; }
+.activity-icon.green { background-color: #4ade8033; color: #4ade80; }
+.activity-icon.purple { background-color: #a78bfa33; color: #a78bfa; }
+
+.activity-details { flex-grow: 1; } /* FAZ O TEXTO OCUPAR O ESPAÇO */
+.activity-details h4 { font-size: 1rem; font-weight: 500; }
+.activity-details p { font-size: 0.9rem; color: #94a3b8; }
+.activity-time { font-size: 0.9rem; color: #94a3b8; flex-shrink: 0; }
+
+.view-all-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #334155; /* COR DE FUNDO SUTIL */
+    border: none;
+    color: #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase; /* Letras maiúsculas */
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+.view-all-btn:hover { background-color: #475569; }
+
+/* Painel de Ações Rápidas */
+.action-list { list-style: none; }
+.action-list li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 15px; /* PADDING AJUSTADO */
+    border-radius: 8px;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+.action-list li a:hover { background-color: #334155; }
+.action-list li a .fas {
+    font-size: 1.2rem;
+    width: 25px;
+    text-align: center;
+    color: #94a3b8;
+}
+
+/* ========== NOVOS ESTILOS PARA A TELA DE TODAS AS ATIVIDADES ========== */
+
+/* --- Cabeçalho da Página --- */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.page-title h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+.page-title p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+.btn-filter {
+    background-color: #293649;
+    border: 1px solid #475569;
+    color: #cbd5e1;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+.btn-filter:hover {
+    background-color: #334155;
+}
+
+/* --- Painel Principal da Página de Atividades --- */
+.activities-page-panel {
+    padding: 0; /* Remove padding para a toolbar e lista preencherem */
+}
+
+/* --- Barra de Ferramentas --- */
+.activities-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    border-bottom: 1px solid #334155;
+}
+
+.toolbar-search {
+    position: relative;
+    width: 350px;
+}
+.toolbar-search .fa-search {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+.toolbar-search input {
+    width: 100%;
+    background-color: #1e293b; /* Fundo mais escuro */
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 12px 15px 12px 45px;
+    color: #f1f5f9;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+.toolbar-search input::placeholder { color: #94a3b8; }
+
+.toolbar-filters {
+    display: flex;
+    gap: 10px;
+}
+.filter-btn {
+    background-color: transparent;
+    border: 1px solid #475569;
+    color: #cbd5e1;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.filter-btn:hover {
+    background-color: #334155;
+    border-color: #475569;
+}
+.filter-btn.active {
+    background-color: #4f46e5; /* Cor de destaque roxa/azul */
+    color: #fff;
+    border-color: #4f46e5;
+}
+
+/* --- Lista de Atividades --- */
+.full-activity-list {
+    list-style: none;
+    padding: 10px 30px;
+}
+
+.activity-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.activity-row + .activity-row {
+    border-top: 1px solid #334155;
+}
+
+.activity-info h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.activity-info p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+.datetime-details {
+    display: flex;
+    gap: 15px;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+.datetime-details .fas {
+    margin-right: 5px;
+}
+
+.activity-status {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    min-width: 120px; /* Largura mínima para evitar quebra de layout */
+}
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+}
+.status-badge.pending {
+    background-color: #f9731633;
+    color: #f97316; /* Laranja */
+}
+.status-badge.completed {
+    background-color: #4ade8033;
+    color: #4ade80; /* Verde */
+}
+
+.details-link {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.details-link:hover {
+    text-decoration: underline;
+}
+
+.activity-status .timestamp {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* --- Rodapé da Lista --- */
+.activities-footer {
+    text-align: center;
+    padding: 20px 30px;
+    border-top: 1px solid #334155;
+}
+
+/* ========== NOVOS ESTILOS PARA A TELA DE RELATÓRIOS ========== */
+
+/* --- Barra de Ferramentas de Relatórios --- */
+.reports-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #293649;
+    padding: 15px 25px;
+    border-radius: 12px;
+}
+/* Reutilizando o estilo de busca da página de atividades */
+.reports-toolbar .toolbar-search {
+    width: 400px; /* Ajuste de largura se necessário */
+}
+
+/* --- Seção do Grid de Relatórios --- */
+.reports-grid-section {
+    margin-top: 40px;
+}
+.section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #cbd5e1;
+}
+
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Grid responsivo */
+    gap: 25px;
+}
+
+/* --- Card de Relatório Individual --- */
+.report-card {
+    background-color: #293649;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.report-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.report-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 25px; /* Espaço entre o texto e o botão */
+}
+
+.report-icon { /* Usando a classe base já existente .card-icon-wrapper */
+    flex-shrink: 0;
+}
+/* Novas Variações de Cores */
+.report-icon.blue { background-color: #1e40af; color: #60a5fa; }
+.report-icon.green { background-color: #166534; color: #4ade80; }
+.report-icon.purple { background-color: #5b21b6; color: #a78bfa; }
+.report-icon.purple-light { background-color: #6b21a8; color: #c084fc; }
+.report-icon.green-light { background-color: #059669; color: #34d399; }
+.report-icon.yellow { background-color: #ca8a04; color: #facc15; }
+
+.report-card-text h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.report-card-text p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* --- Novo Estilo de Botão Primário --- */
+.btn-primary {
+    background-color: #4f46e5; /* Azul/Índigo */
+    color: #fff;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #4338ca; /* Tom mais escuro */
+}

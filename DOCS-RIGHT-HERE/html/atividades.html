@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todas as Atividades - DocsRightHere</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="dashboard-layout">
+
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="header-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>DocsRightHere</h1>
+            </div>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buscar...">
+            </div>
+            <div class="header-actions">
+                <i class="fas fa-cog"></i>
+                <i class="fas fa-bell"></i>
+                <div class="user-avatar"></div>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <section class="page-header">
+                <div class="page-title">
+                    <h2>Todas as Atividades</h2>
+                    <p>Histórico completo de todas as atividades do sistema</p>
+                </div>
+                <button class="btn-filter">
+                    <i class="fas fa-filter"></i> Filtros Avançados
+                </button>
+            </section>
+
+            <section class="panel activities-page-panel">
+                <div class="activities-toolbar">
+                    <div class="toolbar-search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Buscar Atividades...">
+                    </div>
+                    <div class="toolbar-filters">
+                        <button class="filter-btn active">Todos</button>
+                        <button class="filter-btn">Hoje</button>
+                        <button class="filter-btn">Esta semana</button>
+                        <button class="filter-btn">Este mês</button>
+                    </div>
+                </div>
+
+                <ul class="full-activity-list">
+                    <li class="activity-row">
+                        <div class="activity-info">
+                            <h4>Novo arquivo anexado</h4>
+                            <p>por Maria Silva</p>
+                        </div>
+                        <div class="activity-status">
+                            <span class="status-badge pending">Pendente</span>
+                            <a href="#" class="details-link">Ver Detalhes</a>
+                            <span class="timestamp">2 min atrás</span>
+                        </div>
+                    </li>
+                    <li class="activity-row">
+                        <div class="activity-info">
+                            <h4>Novo Aluno Matriculado</h4>
+                            <p>João Matheus Bertoman - 2º Ano - Período: Matutino</p>
+                        </div>
+                        <div class="activity-status">
+                            <span class="status-badge pending">Pendente</span>
+                            <a href="#" class="details-link">Ver Detalhes</a>
+                            <span class="timestamp">7 min atrás</span>
+                        </div>
+                    </li>
+                    <li class="activity-row">
+                        <div class="activity-info">
+                            <h4>Reunião de pais agendada</h4>
+                            <p>Professora Paula Schmitt</p>
+                            <div class="datetime-details">
+                                <span><i class="fas fa-calendar-alt"></i> 28/03/2026</span>
+                                <span><i class="fas fa-clock"></i> 14:00</span>
+                            </div>
+                        </div>
+                        <div class="activity-status">
+                            <span class="status-badge pending">Pendente</span>
+                            <a href="#" class="details-link">Ver Detalhes</a>
+                            <span class="timestamp">2 min atrás</span>
+                        </div>
+                    </li>
+                    <li class="activity-row">
+                        <div class="activity-info">
+                            <h4>Reunião de professores agendada</h4>
+                            <p>Diretoria - Sra. Patricia Listwert</p>
+                             <div class="datetime-details">
+                                <span><i class="fas fa-calendar-alt"></i> 28/03/2026</span>
+                                <span><i class="fas fa-clock"></i> 09:00</span>
+                            </div>
+                        </div>
+                        <div class="activity-status">
+                            <span class="status-badge completed">Concluído</span>
+                            <a href="#" class="details-link">Ver Detalhes</a>
+                            <span class="timestamp">22/03/2026</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="activities-footer">
+                    <button class="view-all-btn">Ver Menos</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
