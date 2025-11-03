@@ -20,10 +20,8 @@ public class DocService {
         return this.repo.findAll();
     }
 
-    public ResponseEntity<DocModel> findById(Long id){
-        return this.repo.findById(id)
-                .map(self -> new ResponseEntity<>(self, HttpStatus.OK))
-                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    public Optional<DocModel> findById(Long id){
+        return this.repo.findById(id);
     }
 
     public ResponseEntity<DocModel> save(DocModel doc){

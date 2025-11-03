@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.print.Doc;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/docs")
@@ -28,7 +29,14 @@ public class DocController {
 
     @GetMapping("/{id}")
     public ResponseEntity<DocModel> findById(@PathVariable Long id){
-        return service.findById(id);
+        return this.service.findById(id)
+                .map(docModel -> new ResponseEntity<>(docModel, HttpStatus.OK))
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+
+//        if (response.isPresent()){
+//            return new ResponseEntity<>(response.get(), HttpStatus.OK);
+//        }
+//        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @PostMapping
