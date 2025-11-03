@@ -16,12 +16,8 @@ public class DocService {
     @Autowired
     private DocRepository repo;
 
-    public ResponseEntity<List<DocModel>> findAll(){
-        List<DocModel> response = this.repo.findAll();
-        if (!response.isEmpty()){
-            return new ResponseEntity<>(response, HttpStatus.OK);
-        }
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    public List<DocModel> findAll(){
+        return this.repo.findAll();
     }
 
     public ResponseEntity<DocModel> findById(Long id){

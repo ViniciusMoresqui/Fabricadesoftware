@@ -3,6 +3,7 @@ package com.hc.Docs.controller;
 import com.hc.Docs.model.DocModel;
 import com.hc.Docs.service.DocService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,13 +12,18 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/docs")
+@CrossOrigin("*")
 public class DocController {
     @Autowired
     private DocService service;
 
     @GetMapping
     public ResponseEntity<List<DocModel>> findAll(){
-        return this.service.findAll();
+        List<DocModel> response = this.service.findAll();
+        if (!response.isEmpty()){
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @GetMapping("/{id}")
