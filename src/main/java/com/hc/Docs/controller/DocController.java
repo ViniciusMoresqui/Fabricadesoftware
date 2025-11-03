@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/docs")
+@RequestMapping("/api/docs")
 @CrossOrigin("*")
 public class DocController {
     @Autowired
