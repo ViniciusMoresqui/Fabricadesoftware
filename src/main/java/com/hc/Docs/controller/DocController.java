@@ -3,6 +3,7 @@ package com.hc.Docs.controller;
 import com.hc.Docs.model.DocModel;
 import com.hc.Docs.service.DocService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.graphql.GraphQlProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -42,12 +43,16 @@ public class DocController {
 
     @PutMapping("/{id}")
     public ResponseEntity<DocModel> update(@PathVariable("id") Long id,@RequestBody DocModel doc){
-        return this.service.update(id, doc);
+        return this.service.update(id, doc)
+                .map(self -> new ResponseEntity<>(self, HttpStatus.OK))
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<DocModel> delete(@PathVariable("id") Long id){
-        return this.service.delete(id);
+        return this.service.delete(id)
+                .map(self -> new ResponseEntity<>(self, HttpStatus.OK))
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
 

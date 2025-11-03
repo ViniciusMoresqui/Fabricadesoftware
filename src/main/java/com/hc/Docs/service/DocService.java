@@ -28,21 +28,19 @@ public class DocService {
         return this.repo.save(doc);
     }
 
-    public ResponseEntity<DocModel> update(Long id, DocModel newDoc){
+    public Optional<DocModel> update(Long id, DocModel newDoc){
         return repo.findById(id).map(self -> {
             self.setTitle(newDoc.getTitle());
             self.setContent(newDoc.getContent());
-            DocModel response = this.repo.save(self);
-            return new ResponseEntity<>(response, HttpStatus.OK);
-        }).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+            return self;
+        });
     }
 
-    public ResponseEntity<DocModel> delete(Long id){
+    public Optional<DocModel> delete(Long id){
         return this.repo.findById(id)
                 .map(self -> {
                     this.repo.deleteById(id);
-                    return new ResponseEntity<>(self, HttpStatus.OK);
-                })
-                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+                    return self;
+                });
     }
 }
