@@ -24,9 +24,8 @@ public class DocService {
         return this.repo.findById(id);
     }
 
-    public ResponseEntity<DocModel> save(DocModel doc){
-        DocModel saved = this.repo.save(doc);
-        return new ResponseEntity<>(saved, HttpStatus.CREATED);
+    public DocModel save(DocModel doc){
+        return this.repo.save(doc);
     }
 
     public ResponseEntity<DocModel> update(Long id, DocModel newDoc){
