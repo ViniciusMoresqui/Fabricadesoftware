@@ -1,42 +1,39 @@
 package com.hc.Docs.service;
 
-import com.hc.Docs.model.DocModel;
-import com.hc.Docs.repository.DocRepository;
+import com.hc.Docs.model.CardModel;
+import com.hc.Docs.repository.CardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class DocService {
+public class CardService {
 
     @Autowired
-    private DocRepository repo;
+    private CardRepository repo;
 
-    public List<DocModel> findAll(){
+    public List<CardModel> findAll(){
         return this.repo.findAll();
     }
 
-    public Optional<DocModel> findById(Long id){
+    public Optional<CardModel> findById(Long id){
         return this.repo.findById(id);
     }
 
-    public DocModel save(DocModel doc){
+    public CardModel save(CardModel doc){
         return this.repo.save(doc);
     }
 
-    public Optional<DocModel> update(Long id, DocModel newDoc){
+    public Optional<CardModel> update(Long id, CardModel newDoc){
         return repo.findById(id).map(self -> {
             self.setTitle(newDoc.getTitle());
-            self.setContent(newDoc.getContent());
             return self;
         });
     }
 
-    public Optional<DocModel> delete(Long id){
+    public Optional<CardModel> delete(Long id){
         return this.repo.findById(id)
                 .map(self -> {
                     this.repo.deleteById(id);
