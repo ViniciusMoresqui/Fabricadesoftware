@@ -26,10 +26,10 @@ public class CardService {
         return this.repo.save(doc);
     }
 
-    public Optional<CardModel> update(Long id, CardModel newDoc){
+    public Optional<CardModel> update(Long id, CardModel newCard){
         return repo.findById(id).map(self -> {
-            self.setTitle(newDoc.getTitle());
-            return self;
+            self.setTitle(newCard.getTitle());
+            return this.repo.save(self);
         });
     }
 

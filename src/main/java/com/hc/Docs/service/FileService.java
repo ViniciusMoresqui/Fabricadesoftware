@@ -6,10 +6,13 @@ import com.hc.Docs.model.FileModel;
 import com.hc.Docs.repository.CardRepository;
 import com.hc.Docs.repository.FileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.UUID;
@@ -24,7 +27,11 @@ public class FileService {
     @Autowired
     private FileConfiguration fileConfiguration;
 
-    public FileModel saveFile(Long idCard, MultipartFile file){
+    public FileModel getFileModel(Long id){
+        return this.fileRepository.findById(id).orElse(null);
+    }
+
+    public CardModel saveFile(Long idCard, MultipartFile file){
         if (!cardRepository.existsById(idCard)){
             return null;
         }
@@ -44,9 +51,24 @@ public class FileService {
 
         FileModel fileReference = new FileModel(originalName, ext, localName);
         card.addFile(fileReference);
-        cardRepository.save(card);
-        return fileReference;
+        return cardRepository.save(card);
     }
 
+    public Resource getFile(Long fileId){
+        FileModel fileReference = fileRepository.findById(fileId).orElseThrow();
 
+        Path path = Paths.get(fileConfiguration.getName())
+                .resolve(fileReference.getLocalName());
+
+        try {
+             Resource resource = new UrlResource(path.toUri());
+             if (!resource.exists() || !resource.isReadable()){
+                 return null;
+             }
+             return resource;
+        }catch (MalformedURLException er){
+            return null;
+        }
+
+    }
 }
