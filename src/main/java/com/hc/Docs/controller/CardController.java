@@ -11,7 +11,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/card")
-@CrossOrigin("*")
+//@CrossOrigin("*")
+@CrossOrigin(origins = {"http://localhost:3000", "http://127.0.0.1:3000", "*"})
 public class CardController {
     @Autowired
     private CardService service;

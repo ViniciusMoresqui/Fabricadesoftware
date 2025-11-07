@@ -15,7 +15,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/api/file")
-@CrossOrigin("*")
+//@CrossOrigin("*")
+@CrossOrigin(origins = {"http://localhost:3000", "http://127.0.0.1:3000", "*"})
 public class FileController {
 
     @Autowired
@@ -23,7 +24,6 @@ public class FileController {
 
     @PostMapping("/{id}")
     public ResponseEntity<CardModel> uploadFile(@PathVariable("id") Long idCard, @RequestParam("file") MultipartFile file){
-        System.out.println(idCard);
         CardModel response = fileService.saveFile(idCard, file);
         if (response != null){
             return ResponseEntity.ok(response);

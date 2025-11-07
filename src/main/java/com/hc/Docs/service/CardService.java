@@ -1,6 +1,7 @@
 package com.hc.Docs.service;
 
 import com.hc.Docs.model.CardModel;
+import com.hc.Docs.model.FileModel;
 import com.hc.Docs.repository.CardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,9 @@ public class CardService {
 
     @Autowired
     private CardRepository repo;
+
+    @Autowired
+    private FileService fileService;
 
     public List<CardModel> findAll(){
         return this.repo.findAll();
@@ -34,11 +38,25 @@ public class CardService {
     }
 
     public Optional<CardModel> delete(Long id){
-        return this.repo.findById(id)
-                .map(self -> {
-                    this.repo.deleteById(id);
-                    return self;
-                });
+        if (!this.repo.existsById(id)) return Optional.empty();
+
+        CardModel card = repo.findById(id).get();
+        List<FileModel> files = card.getFiles();
+        this.fileService.removeFileListFromStorage(files);
+
+//        System.out.println("Itens na lista"+files.size());
+//
+//        for (FileModel file : files) {
+//            fileService.deleteFile(file.getId());
+//        }
+
+//        for (FileModel f: files){
+//            fileService.deleteFile(f.getId());
+//        }
+
+
+        this.repo.deleteById(id);
+        return Optional.of(card);
     }
 
     public boolean existById(Long id){

@@ -16,6 +16,7 @@ import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -83,9 +84,11 @@ public class FileService {
 
         FileModel file = fileOpt.get();
 
-        Path path = Paths.get(fileConfiguration.getName()).resolve(file.getLocalName());
+        Path path = Paths.get(fileConfiguration.getName()).resolve(file.getLocalName())
+                .toAbsolutePath();
 
         try{
+            System.out.println("existe: "+Files.exists(path)+ " No caminho "+ path);
             Files.deleteIfExists(path);
             CardModel card = file.getCard();
             if (card!=null){
@@ -99,4 +102,21 @@ public class FileService {
         }
 
     }
+
+    public boolean removeFileListFromStorage(List<FileModel> files){
+        for (FileModel file: files){
+
+            Path path = Paths.get(fileConfiguration.getName()).resolve(file.getLocalName())
+                    .toAbsolutePath();
+            try{
+                System.out.println("existe: "+Files.exists(path)+ " No caminho "+ path);
+                Files.deleteIfExists(path);
+                this.fileRepository.delete(file);
+            }catch (IOException er){
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
