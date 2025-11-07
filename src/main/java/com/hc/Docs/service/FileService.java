@@ -13,8 +13,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -68,6 +70,32 @@ public class FileService {
              return resource;
         }catch (MalformedURLException er){
             return null;
+        }
+
+    }
+
+    public boolean deleteFile(Long idFile){
+        Optional<FileModel> fileOpt = this.fileRepository.findById(idFile);
+
+        if(fileOpt.isEmpty()){
+            return false;
+        }
+
+        FileModel file = fileOpt.get();
+
+        Path path = Paths.get(fileConfiguration.getName()).resolve(file.getLocalName());
+
+        try{
+            Files.deleteIfExists(path);
+            CardModel card = file.getCard();
+            if (card!=null){
+                card.removeFile(file);
+                cardRepository.save(card);
+            }
+            fileRepository.delete(file);
+            return true;
+        }catch (IOException er){
+            return false;
         }
 
     }

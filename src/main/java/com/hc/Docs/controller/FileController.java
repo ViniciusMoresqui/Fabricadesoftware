@@ -15,6 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/api/file")
+@CrossOrigin("*")
 public class FileController {
 
     @Autowired
@@ -45,4 +46,11 @@ public class FileController {
 
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteFile(@PathVariable("id") Long id){
+        if (this.fileService.deleteFile(id)){
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.notFound().build();
+    }
 }
