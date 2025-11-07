@@ -40,4 +40,8 @@ public class CardService {
                     return self;
                 });
     }
+
+    public boolean existById(Long id){
+        return this.repo.existsById(id);
+    }
 }

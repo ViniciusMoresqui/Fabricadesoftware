@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/docs")
+@RequestMapping("/api/card")
 @CrossOrigin("*")
 public class CardController {
     @Autowired
@@ -33,8 +33,8 @@ public class CardController {
     }
 
     @PostMapping
-    public ResponseEntity<CardModel> save(@RequestBody CardModel doc){
-        CardModel response = this.service.save(doc);
+    public ResponseEntity<CardModel> save(@RequestBody CardModel card){
+        CardModel response = this.service.save(card);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 

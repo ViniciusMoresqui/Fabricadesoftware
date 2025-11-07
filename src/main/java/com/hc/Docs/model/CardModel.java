@@ -17,7 +17,7 @@ public class CardModel {
     private Long id;
     private String title;
 
-
+    @OneToMany(mappedBy = "card", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<FileModel> files = new ArrayList<>();
 
     public void addFile(FileModel file){

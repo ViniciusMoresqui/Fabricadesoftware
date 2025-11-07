@@ -1,5 +1,6 @@
 package com.hc.Docs.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,7 +11,6 @@ import lombok.Setter;
 @Table(name = "files")
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 public class FileModel {
 
@@ -24,6 +24,12 @@ public class FileModel {
 
     @ManyToOne
     @JoinColumn(name = "card_id")
+    @JsonIgnore
     private CardModel card;
 
+    public FileModel(String originalFileName, String ext, String localName) {
+        this.originalFileName = originalFileName;
+        this.ext = ext;
+        this.localName = localName;
+    }
 }
