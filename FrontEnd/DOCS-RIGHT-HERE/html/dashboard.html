@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DocsRightHere - Dashboard</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/dashboard.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">
+        <img src="/img/SLOGAN - DRH.svg" alt="Logo" width="36" height="36">
+      </div>
+      <h1>DocsRightHere</h1>
+    </div>
+    <div class="actions">
+      <div class="search">
+        <img src="/img/lupa2.png" alt="Buscar" width="26" height="26">
+        <input type="text" placeholder="Buscar..." />
+        <img src="/img/Funil2.png" alt="Filtros" width="22" height="22">
+      </div>
+      <button class="icon-btn"><img src="/img/notificações.png" alt="Notificações" width="24" height="24"></button>
+      <button class="icon-btn"><img src="/img/CONFIG.png" alt="Configurações" width="26" height="26"></button>
+      <button class="icon-btn"><img src="/img/Perfil.png" alt="Perfil" width="27" height="27"></button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="left">
+      <h2>Bem-Vindo de volta!</h2>
+      <p>Aqui está um resumo das atividades da sua escola hoje.</p>
+
+      <div class="panel">
+        <div class="panel-header">
+          <h3>Últimos Cards / Atividades Recentes</h3>
+          <div class="tools">
+            <input type="text" placeholder="Buscar..." />
+            <button>Filtros</button>
+          </div>
+        </div>
+
+        <div class="cards" id="cards">
+          <a href="#" class="see-all">Ver todos cards</a>
+        </div>
+      </div>
+    </section>
+
+    <aside class="right">
+      <div class="new-card" id="new-card">
+        <span>＋</span>
+        <p>Criar novo card</p>
+      </div>
+
+      <div class="quick">
+        <h4>Ações Rápidas</h4>
+        <button>📄 Gerar Relatório</button>
+        <button>📁 Arquivos</button>
+        <button>🔍 Consultar Arquivos</button>
+        <button>📋 Realizar Chamada</button>
+        <button>📅 Agendar Reunião</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- ===============================
+       MODAL DE VISUALIZAÇÃO / EDIÇÃO
+       =============================== -->
+<!-- ===============================
+     MODAL DE VISUALIZAÇÃO / EDIÇÃO
+     =============================== -->
+<div class="overlay" id="cardModalOverlay" style="display:none;">
+  <div class="modal" id="cardModal">
+    <div class="modal-header">
+      <div class="icon" id="cardModalIcon">A</div>
+      <div class="title-area">
+        <h2 id="cardModalTitle">Atividades</h2>
+        <p id="cardModalCreator">Criado por ...</p>
+      </div>
+      <button id="cardModalClose" class="btn-close">✕</button>
+    </div>
+
+    <div class="modal-tools">
+      <input id="cardModalSearch" type="text" placeholder="Buscar..." class="search-input">
+      <div class="select-wrap">
+        <button id="cardModalFilterBtn" class="filter-btn">Todos os tipos ▼</button>
+        <ul class="filter-list" id="cardModalFilterPanel" style="display:none;">
+          <li data-type="all">Todos os tipos</li>
+          <li data-type="pdf">PDF</li>
+          <li data-type="image">Imagem</li>
+          <li data-type="excel">Excel</li>
+          <li data-type="doc">Word</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="file-list" id="cardModalFiles"></div>
+
+    <!-- Container de edição de ícone/cor -->
+    <div id="editOptionsContainer"></div>
+
+    <!-- Rodapé reposicionado -->
+    <div class="modal-footer">
+      <div class="footer-left">
+        <label class="btn-attach" for="cardModalUpload">Anexar</label>
+        <input id="cardModalUpload" type="file" multiple hidden>
+      </div>
+      <div class="footer-right">
+        <button id="cardModalEdit" class="btn-edit">Editar</button>
+        <button id="cardModalCloseFooter" class="btn-close-modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===============================
+     MODAL DE CRIAÇÃO DE NOVO CARD
+     =============================== -->
+<div class="overlay" id="newCardOverlay" style="display:none;">
+  <div class="modal new-card-modal">
+    <h2>Digite um nome para o seu novo card!</h2>
+    <input id="newCardTitleInput" type="text" placeholder="Ex: Provas 2º bimestre - todas as turmas">
+
+    <!-- SELEÇÃO DE ÍCONE -->
+    <div class="icon-selection">
+      <p>Escolha um ícone:</p>
+      <div class="icons-grid">
+        <img src="../icones/beca.png" data-icon="beca" class="icon-option">
+        <img src="../icones/calendarwhite.png" data-icon="calendarwhite" class="icon-option">
+        <img src="../icones/camera.png" data-icon="camera" class="icon-option">
+        <img src="../icones/cartawhite.png" data-icon="cartawhite" class="icon-option">
+        <img src="../icones/IMGICON.png" data-icon="IMGICON" class="icon-option">
+        <img src="../icones/livro.png" data-icon="livro" class="icon-option">
+        <img src="../icones/olho.png" data-icon="olho" class="icon-option">
+        <img src="../icones/paper.png" data-icon="paper" class="icon-option">
+        <img src="../icones/people.png" data-icon="people" class="icon-option">
+        <img src="../icones/reuniaowhite.png" data-icon="reuniaowhite" class="icon-option">
+      </div>
+    </div>
+
+    <!-- SELETOR LGBT -->
+    <div class="color-selection">
+      <p>Escolha uma cor:</p>
+      <div class="color-options">
+        <button class="color-option" style="background:#38d1a1;" data-color="#38d1a1"></button>
+        <button class="color-option" style="background:#EFCB68;" data-color="#EFCB68"></button>
+        <button class="color-option" style="background:#E74C3C;" data-color="#E74C3C"></button>
+        <button class="color-option" style="background:#3498DB;" data-color="#3498DB"></button>
+        <button class="color-option" style="background:#9B59B6;" data-color="#9B59B6"></button>
+      </div>
+    </div>
+
+    <!-- BOTÕES NOVO CARD -->
+    <div class="buttons">
+      <button id="createCardBtn">Criar</button>
+      <button id="cancelCreateBtn">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

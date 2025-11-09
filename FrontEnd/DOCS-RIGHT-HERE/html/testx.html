@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>DocsRightHere - Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/DOCS-RIGHT-HERE/Fabricadesoftware/DOCS-RIGHT-HERE/css/testx.css" />
+    <link rel="stylesheet" href="/DOCS-RIGHT-HERE/Fabricadesoftware/DOCS-RIGHT-HERE/css/login.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <div class="logo">
+                <img src="/DOCS-RIGHT-HERE/Fabricadesoftware/DOCS-RIGHT-HERE/img/SLOGAN - DRH.svg" alt="Logo" width="36" height="36x">
+            </div>
+            <h1>DocsRightHere</h1>
+        </div>
+
+        <div class="actions">
+            <div class="search">
+                <img src="/DOCS-RIGHT-HERE/Fabricadesoftware/DOCS-RIGHT-HERE/img/lupa2.png" alt="Logo" width="26" height="26x">
+                <input type="text" placeholder="Buscar..." />
+                <img src="/DOCS-RIGHT-HERE/Fabricadesoftware/DOCS-RIGHT-HERE/img/Funil2.png" alt="Logo" width="22" height="22x">
+            </div>
+            <button class="icon-btn" aria-label="Notificações">
+                <img src="/DOCS-RIGHT-HERE/Fabricadesoftware/DOCS-RIGHT-HERE/img/notificações.png" alt="Logo-Notificacao" width="24"
+                    height="24x">
+            </button>
+            <button class="icon-btn" aria-label="Configurações">
+                <img src="/DOCS-RIGHT-HERE/Fabricadesoftware/DOCS-RIGHT-HERE/img/CONFIG.png" alt="Logo-Config" width="26" height="26x">
+            </button>
+            <button class="icon-btn" aria-label="Perfil">
+                <img src="/DOCS-RIGHT-HERE/Fabricadesoftware/DOCS-RIGHT-HERE/img/Perfil.png" alt="Logo-perfil" width="27" height="27x">
+            </button>
+
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="left">
+            <h2>Bem-Vindo de volta!</h2>
+            <p>Aqui está um resumo das atividades da sua escola hoje.</p>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <h3>Últimos Cards / Atividades Recentes</h3>
+                    <div class="tools">
+                        <input type="text" placeholder="Buscar..." />
+                        <button>Filtros</button>
+                    </div>
+                </div>
+
+                <div class="cards" id="cards">
+                    <div class="card">
+                        <div class="icon doc"></div>
+                        <div class="info">
+                            <h4>Documentos - Matrícula - Eduardo Silva</h4>
+                            <p>por Maria Silva</p>
+                        </div>
+                        <div class="actions">
+                            <button class="ghost">Excluir</button>
+                            <button>Abrir</button>
+                            <span>2 min atrás</span>
+                        </div>
+                    </div>
+
+                <a href="#" class="see-all">Ver todos cards</a>
+            </div>
+            </section>
+
+        <aside class="right">
+            <div class="new-card" id="new-card">
+                <span>＋</span>
+                <p>Criar novo card</p>
+            </div>
+
+            <div class="quick">
+                <h4>Ações Rápidas</h4>
+
+                <button>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="icon-quick">
+                        <line x1="12" y1="20" x2="12" y2="10"></line>
+                        <line x1="18" y1="20" x2="18" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="16"></line>
+                    </svg>
+                    Gerar Relatório
+                </button>
+
+                <button>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="icon-quick">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Arquivos
+                </button>
+
+                <button>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="icon-quick">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <circle cx="12" cy="15" r="4"></circle>
+                        <line x1="15" y1="18" x2="18" y2="21"></line>
+                    </svg>
+                    Consultar Arquivos
+                </button>
+
+                <button>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="icon-quick">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                        <line x1="12" y1="18" x2="12" y2="18"></line>
+                    </svg>
+                    Realizar Chamada
+                </button>
+
+                <button>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="icon-quick">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                        <circle cx="12" cy="15" r="3"></circle>
+                        <path d="M12 12v3"></path>
+                    </svg>
+                    Agendar reunião
+                </button>
+            </div>
+        </aside>
+    </main>
+
+
+<div class="overlay" id="cardModalOverlay" style="display:none;">
+  <div class="modal" id="cardModal">
+    <!-- ===== Cabeçalho ===== -->
+    <div class="modal-header">
+      <div class="icon" id="cardModalIcon"><i class="fa-solid fa-file-lines"></i></div>
+      <div class="title-area">
+        <h2 id="cardModalTitle">Documentos - Matrícula - Eduardo Silva</h2>
+        <p id="cardModalCreator">por Maria Silva</p>
+      </div>
+      <button id="cardModalClose" class="btn-close">✕</button>
+    </div>
+
+    <!-- ===== Barra de busca e filtro ===== -->
+    <div class="modal-tools">
+      <input id="cardModalSearch" type="text" placeholder="Buscar..." class="search-input">
+      <div class="select-wrap">
+        <button id="cardModalFilterBtn" class="filter-btn">Todos os tipos <i class="fa-solid fa-chevron-down"></i></button>
+        <ul class="filter-list" id="cardModalFilterPanel">
+          <li data-type="all">Todos os tipos</li>
+          <li data-type="pdf">PDF</li>
+          <li data-type="image">Imagem</li>
+          <li data-type="excel">Excel</li>
+          <li data-type="doc">Word</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ===== Lista de arquivos ===== -->
+    <div class="file-list" id="cardModalFiles"></div>
+
+    <!-- ===== Rodapé ===== -->
+    <div class="modal-footer">
+      <div class="left">
+        <label class="btn-attach" for="cardModalUpload">📎 Anexar</label>
+        <input id="cardModalUpload" type="file" multiple style="display:none">
+      </div>
+      <div class="right">
+        <button id="cardModalEdit" class="btn-edit">Editar</button>
+        <button id="cardModalCloseFooter" class="btn-close-modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="/DOCS-RIGHT-HERE/Fabricadesoftware/DOCS-RIGHT-HERE/js/testx.js"></script>
+
+    <!-- Modal -->
+
+
+</body>
+
+</html>

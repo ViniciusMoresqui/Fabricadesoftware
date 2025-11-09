@@ -1,0 +1,258 @@
+/* Importando uma fonte do Google Fonts para se aproximar da imagem */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Estilos Globais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #f0f8ff; /* AliceBlue - cor base para textos claros */
+    height: 100vh;
+    overflow: hidden; /* Evita barras de rolagem */
+}
+
+/* Container Principal com Flexbox */
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* ----- Coluna da Esquerda (Informações) ----- */
+.info-panel {
+    flex-basis: 55%; /* Ocupa 55% da largura */
+    background: linear-gradient(120deg, #10b981, #06b6d4, #0891b2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Círculos decorativos no fundo */
+.info-panel::before, .info-panel::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.info-panel::before {
+    width: 300px;
+    height: 300px;
+    top: -50px;
+    left: -100px;
+}
+
+.info-panel::after {
+    width: 450px;
+    height: 450px;
+    bottom: -150px;
+    right: -150px;
+}
+
+.info-content {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.logo .fa-graduation-cap {
+    font-size: 2.5rem;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.logo p {
+    font-size: 0.9rem;
+    margin-top: -25px; /* Ajuste para ficar abaixo do h1 */
+}
+
+.info-content h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.info-content h2 span {
+    color: #a7f3d0; /* Verde claro para destaque */
+}
+
+.info-content .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 450px;
+}
+
+.feature-list {
+    list-style: none;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.feature-list .fas {
+    font-size: 1.5rem;
+}
+
+
+/* ----- Coluna da Direita (Login) ----- */
+.login-panel {
+    flex-basis: 45%; /* Ocupa 45% da largura */
+    background-color: #1e293b; /* Azul escuro/ardósia */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 400px;
+    background-color: #293649; /* Um pouco mais claro que o fundo */
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.form-wrapper h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-wrapper h2 span {
+    color: #22d3ee; /* Ciano/Turquesa para destaque */
+}
+
+.form-wrapper > p {
+    color: #94a3b8; /* Cinza azulado claro para texto secundário */
+    margin-bottom: 30px;
+}
+
+/* Grupos de Input (Label, Ícone, Input) */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+.input-group .icon {
+    position: absolute;
+    left: 15px;
+    top: 42px; /* Ajuste para alinhar verticalmente com o input */
+    color: #94a3b8;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px 12px 45px; /* Espaço à esquerda para o ícone */
+    background-color: #3f4d60;
+    border: 1px solid #526175;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+}
+
+.input-group input::placeholder {
+    color: #94a3b8;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #22d3ee;
+}
+
+/* Opções do formulário (Lembrar-me, Esqueceu a senha?) */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-options a {
+    color: #22d3ee;
+    text-decoration: none;
+}
+
+.form-options a:hover {
+    text-decoration: underline;
+}
+
+/* Botão de Login */
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to right, #22d3ee, #10b981);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    margin-bottom: 25px;
+}
+
+.btn-login:hover {
+    opacity: 0.9;
+}
+
+/* Link para solicitar acesso e rodapé */
+.signup-link {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+.signup-link a {
+    color: #22d3ee;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
